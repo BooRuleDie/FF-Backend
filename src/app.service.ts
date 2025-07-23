@@ -28,4 +28,33 @@ export class AppService {
       },
     ];
   }
+
+  // this service method should be under a
+  // flag, but it's controlled under the
+  // controller instead of here , just so you know
+  getDevelopers(): User[] {
+    return [
+      {
+        key: '1',
+        name: 'Eren Burulday',
+        age: 32,
+        address: 'New York No. 1 Lake Park',
+        tags: ['developer'],
+      },
+      {
+        key: '2',
+        name: 'Alper',
+        age: 42,
+        address: 'London No. 1 Lake Park',
+        tags: ['developer'],
+      },
+      {
+        key: '3',
+        name: 'Khayyam',
+        age: 32,
+        address: 'Sydney No. 1 Lake Park',
+        tags: ['developer'],
+      },
+    ];
+  }
 }
