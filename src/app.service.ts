@@ -57,4 +57,22 @@ export class AppService {
       },
     ];
   }
+  getAdmins(): User[] {
+    return [
+      {
+        key: '1',
+        name: 'Ertuğ',
+        age: 32,
+        address: 'New York No. 1 Lake Park',
+        tags: ['developer'],
+      },
+      {
+        key: '2',
+        name: 'Okay',
+        age: 42,
+        address: 'London No. 1 Lake Park',
+        tags: ['developer'],
+      },
+    ];
+  }
 }
