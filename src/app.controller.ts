@@ -24,4 +24,9 @@ export class AppController {
     }
     throw new UnauthorizedException();
   }
+
+  @Get('/gh-actions')
+  githubActions(): string {
+    return 'Hi from GH Actions!';
+  }
 }
