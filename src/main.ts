@@ -11,7 +11,8 @@ async function bootstrap() {
     ],
   });
   const port = process.env.PORT ?? 3000;
-  await app.listen(port);
+  const host = process.env.HOST ?? '127.0.0.1';
+  await app.listen(port, host);
   console.log(`App started at port ${port}`);
 }
 bootstrap().catch((err) => {
