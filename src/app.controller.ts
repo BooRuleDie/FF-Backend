@@ -25,6 +25,15 @@ export class AppController {
     throw new UnauthorizedException();
   }
 
+  @Get('/admins')
+  getAdmins(): User[] {
+    const isFlagEnabled = this.unleash.isEnabled('admin-users');
+    if (isFlagEnabled) {
+      return this.appService.getAdmins();
+    }
+    throw new UnauthorizedException();
+  }
+
   @Get('/gh-actions')
   githubActions(): string {
     return 'Hi from GH Actions !';
