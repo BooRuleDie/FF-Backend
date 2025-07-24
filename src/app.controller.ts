@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { User } from './types';
 import { UnauthorizedException } from '@nestjs/common';
 
-@Controller()
+@Controller('/api')
 export class AppController {
   constructor(
     private readonly appService: AppService,
