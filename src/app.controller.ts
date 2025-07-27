@@ -34,15 +34,6 @@ export class AppController {
     throw new UnauthorizedException();
   }
 
-  @Get('/moderators')
-  getModerators(): User[] {
-    const isFlagEnabled = this.unleash.isEnabled('Moderators');
-    if (isFlagEnabled) {
-      return this.appService.getModerators();
-    }
-    throw new UnauthorizedException();
-  }
-
   @Get('/gh-actions')
   githubActions(): string {
     return 'Hi from GH Actions !';
