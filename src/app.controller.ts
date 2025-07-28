@@ -36,6 +36,6 @@ export class AppController {
 
   @Get('/gh-actions')
   githubActions(): string {
-    return 'Hi from GH Actions !';
+    return 'Hi from GH Actions !!!';
   }
 }
