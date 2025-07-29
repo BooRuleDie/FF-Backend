@@ -36,7 +36,7 @@ export class AppController {
 
   @Get('/moderators')
   getModerators(): User[] {
-    const isFlagEnabled = this.unleash.isEnabled('Moderators');
+    const isFlagEnabled = this.unleash.isEnabled('moderator-users');
     if (isFlagEnabled) {
       return this.appService.getModerators();
     }
