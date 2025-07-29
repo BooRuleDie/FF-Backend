@@ -75,4 +75,22 @@ export class AppService {
       },
     ];
   }
+  getModerators(): User[] {
+    return [
+      {
+        key: '1',
+        name: 'Kemal',
+        age: 12,
+        address: 'New York No. 1 Lake Park',
+        tags: ['moderator'],
+      },
+      {
+        key: '2',
+        name: 'Yaşar',
+        age: 13,
+        address: 'New York No. 1 Lake Park',
+        tags: ['moderator'],
+      },
+    ];
+  }
 }
