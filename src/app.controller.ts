@@ -18,7 +18,7 @@ export class AppController {
 
   @Get('/developers')
   getDevelopers(): User[] {
-    const isFlagEnabled = this.unleash.isEnabled('developer-users');
+    const isFlagEnabled = this.unleash.isEnabled('developers');
     if (isFlagEnabled) {
       return this.appService.getDevelopers();
     }
@@ -27,7 +27,7 @@ export class AppController {
 
   @Get('/admins')
   getAdmins(): User[] {
-    const isFlagEnabled = this.unleash.isEnabled('admin-users');
+    const isFlagEnabled = this.unleash.isEnabled('admins');
     if (isFlagEnabled) {
       return this.appService.getAdmins();
     }
@@ -36,7 +36,7 @@ export class AppController {
 
   @Get('/moderators')
   getModerators(): User[] {
-    const isFlagEnabled = this.unleash.isEnabled('moderator-users');
+    const isFlagEnabled = this.unleash.isEnabled('moderators');
     if (isFlagEnabled) {
       return this.appService.getModerators();
     }
